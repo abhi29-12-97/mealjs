@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="main.css" />
+    <title>Favourite Meals</title>
+  </head>
+  <body onload="loader()">
+    <div id="favourite-page">
+      <!-- navbar -->
+      <!-- navbar -->
+      <div class="navBar">
+        <div class="logo">
+          <a href="/index.html"
+            ><img
+              id="logo-img"
+              src="https://dcassetcdn.com/design_img/375573/141837/141837_3031164_375573_image.jpg"
+          /></a>
+        </div>
+        <div class="Tag-Line">
+          <h4 class="h2">Why wait?</h4>
+          <h4 class="h6">Order Now</h4>
+        </div>
+        <div class="recents"></div>
+        <div class="favourite-tab-link">
+          <a href="/favourite.html">Favourites</a>
+        </div>
+        <div class="search" meal-search>
+          <input
+            type="search"
+            id="search-bar"
+            placeholder="search"
+            meal-search
+          />
+        </div>
+      </div>
+
+      <!-- navbar ends -->
+      <!-- div showing all the meals we have in our favourite list -->
+      <div class="favourite-list" favourite-meal-list></div>
+
+      <!-- template for favourite meal list -->
+
+      <template favourite-list-template>
+        <div class="favourite-results">
+          <!-- showing the name,image,description category of the favourite meal  -->
+          <div>
+            <img src="" class="favourite-dish-image" favourite-dish-image />
+          </div>
+          <div class="favourite-dish-det">
+            <div class="favourite-dish-name-and-category">
+              <div class="favourite-dish-name" favourite-dish-name></div>
+              <div
+                class="favourite-dish-category"
+                favourite-dish-category
+              ></div>
+            </div>
+            <div
+              class="favourite-dish-description"
+              favourite-dish-description
+            ></div>
+          </div>
+          <!-- remove from favourite button -->
+          <button
+            type="button"
+            id=""
+            onclick="removeFromFavourite(this.id)"
+            remove-button
+          >
+            Remove From Favourite
+          </button>
+        </div>
+      </template>
+    </div>
+
+    <script src="favouriteScript.js"></script>
+  </body>
+</html>

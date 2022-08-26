@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body onload="loader()">
+    <!-- navbar starts-->
+    <div class="navBar">
+      <!-- div for logo which also acts as moving to home page -->
+      <div class="logo">
+        <a href="/index.html"
+          ><img
+            id="logo-img"
+            src="https://dcassetcdn.com/design_img/375573/141837/141837_3031164_375573_image.jpg"
+        /></a>
+      </div>
+      <!-- div for the meal app name -->
+      <div class="Tag-Line">
+        <h4 class="h2">Why wait?</h4>
+        <h4 class="h6">Order Now</h4>
+      </div>
+      <!-- moving to the recent tabs -->
+      <div class="recents"></div>
+      <!-- link to move to favourite list page -->
+      <div class="favourite-tab-link">
+        <a href="/favourite.html">Favourites</a>
+      </div>
+      <h1 style="margin-left: 240px; margin-top: 15px">Good Choice!!</h1>
+    </div>
+    <!-- nav bar ends -->
+    <div class="meal-name" meal-name></div>
+    <div class="meal-image-desc">
+      <div class="meal-image"><img src="" meal-image /></div>
+      <div class="meal-desc" meal-desc></div>
+    </div>
+    <script src="mealDetails.js"></script>
+  </body>
+</html>

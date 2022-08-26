@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Meal App</title>
+  </head>
+  <body onload="updateLocal()">
+    <!-- navbar starts-->
+    <div class="navBar">
+      <!-- div for logo which also acts as moving to home page -->
+      <div class="logo">
+        <a href="/index.html"
+          ><img
+            id="logo-img"
+            src="https://dcassetcdn.com/design_img/375573/141837/141837_3031164_375573_image.jpg"
+        /></a>
+      </div>
+      <!-- div for the meal app name -->
+      <div class="Tag-Line">
+        <h4 class="h2">Why wait?</h4>
+        <h4 class="h6">Order Now</h4>
+      </div>
+      <!-- moving to the recent tabs -->
+      <div class="recents"></div>
+      <!-- link to move to favourite list page -->
+      <div class="favourite-tab-link">
+        <a href="/favourite.html">Favourites</a>
+      </div>
+      <!-- search bar of our page -->
+      <div class="search">
+        <input type="search" id="search-bar" placeholder="search" meal-search />
+      </div>
+    </div>
+    <!-- nav bar ends -->
+
+    <!-- dynamic meal list page which is visible only when we search for any food item -->
+    <div class="meal-list" meal-list></div>
+    <!-- main div which contains different list of food items -->
+    <div class="main">hi</div>
+
+    <!-- template for our meal list items -->
+    <template class="meal-list-template" meal-list-template>
+      <div class="results">
+        <!-- link to move to meal details page containing meal name and image clicking on which we move to the page where we have details of this meal -->
+        <a
+          class="links"
+          href="mealDetails.html"
+          id=""
+          onclick="mealPage(this.id)"
+          links
+        >
+          <img src="" class="dish-image" dish-image />
+          <div class="dish-name" dish-name></div>
+        </a>
+        <!-- button to add to favourite list -->
+        <button
+          type="button"
+          id=""
+          onclick="addToFavourite(this.id)"
+          favourite-button
+        >
+          Add to Favourite
+        </button>
+      </div>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>

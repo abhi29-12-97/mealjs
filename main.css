@@ -1,0 +1,205 @@
+body {
+  background-color: #2d2013;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: aliceblue;
+}
+/*styling navbar starts*/
+.navBar {
+  height: 90px;
+  background-color: #23180d;
+  display: flex;
+  padding: 15px 0;
+  padding-bottom: 0;
+  margin: 0em;
+  width: 100%;
+  border: none;
+}
+.logo {
+  height: 80px;
+  width: 110px;
+}
+#logo-img {
+  width: 70px;
+  height: 70px;
+  margin-left: 20px;
+}
+#logo-img:hover {
+  transition-timing-function: ease-in-out;
+  height: 80px;
+  width: 80px;
+  transition: height 1s;
+}
+.Tag-Line {
+  margin-left: 20px;
+  margin-top: -20px;
+  width: 150px;
+  color: rgb(215, 216, 204);
+}
+.h2 {
+  font-size: x-large;
+  font-weight: 900;
+}
+.h6 {
+  margin-top: -30px;
+}
+.favourite-tab-link {
+  margin-left: 90px;
+  font-size: xx-large;
+  height: 70px;
+  background-color: none;
+  width: 200px;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+.favourite-tab-link a {
+  margin: 5px;
+  text-decoration: none;
+  color: aliceblue;
+}
+.favourite-tab-link a:hover {
+  background-color: rgba(255, 68, 0, 0.822);
+  color: black;
+  font-weight: 200;
+  margin: 5px;
+}
+.search {
+  margin-left: 135px;
+  margin-top: 10px;
+}
+.search input {
+  width: 350px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: bisque;
+}
+/*styling navbar ends*/
+/* search results */
+.meal-list {
+  visibility: hidden;
+  display: none;
+  margin-left: 700px;
+  border-radius: 10px;
+}
+.meal-list-update {
+  height: auto;
+  visibility: inherit;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  margin-top: -40px;
+}
+.results {
+  background-color: cadetblue;
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  width: 350px;
+  height: 80px;
+}
+.results a {
+  display: flex;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.dish-image {
+  height: 60px;
+  width: 60px;
+}
+.results a div {
+  color: black;
+  width: 70px;
+  margin-left: 10px;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+.results button,
+.favourite-results button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 18px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-left: 30px;
+  margin-top: 15px;
+  width: 160px;
+}
+
+.results button:hover,
+.favourite-results button:hover {
+  background-color: #3e8e41;
+}
+
+.results button:active,
+.favourite-results button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.hide {
+  display: none;
+}
+/* styling favourite page */
+.favourite-results {
+  display: flex;
+  font-family: Verdana;
+  margin-top: 20px;
+  height: 200px;
+}
+.favourite-dish-image {
+  height: 200px;
+  width: 200px;
+}
+.favourite-dish-det {
+  margin-left: 30px;
+  width: 900px;
+}
+.favourite-dish-name {
+  font-size: xx-large;
+  color: bisque;
+}
+.favourite-dish-category {
+  font-weight: 700;
+  color: wheat;
+}
+.favourite-dish-description {
+  margin-top: 20px;
+  font-size: small;
+  height: 130px;
+  overflow: scroll;
+  font-weight: 500;
+}
+.favourite-results button {
+  height: 50px;
+  margin-top: 60px;
+}
+/* meal page */
+.meal-name {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(207, 216, 218);
+}
+.meal-image-desc {
+  display: flex;
+  margin-top: 20px;
+}
+.meal-image img {
+  height: 500px;
+}
+.meal-desc {
+  margin-left: 20px;
+  width: 700px;
+}
