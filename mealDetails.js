@@ -1,4 +1,5 @@
 let ele = [];
+// getting the session storage element from the session storage
 loader = () => {
   ele = JSON.parse(sessionStorage.getItem("meal"));
   console.log(ele);

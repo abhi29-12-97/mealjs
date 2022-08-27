@@ -7,10 +7,10 @@ let meals = [];
 let list = [];
 var count = 0;
 
-//loade function which will load the items from the local storage such that everyTime we load the favourite page we only gets the items which we have added and favourites
+//loader function which will load the items from the local storage such that everyTime we load the favourite page we only gets the items which we have added and favourites
 function loader() {
   list = JSON.parse(localStorage.getItem("Favourite"));
-
+  //itrating over the list of items present in the favourite list and storing in meals and appending the card to the element
   meals = list.map((element) => {
     const card = mealTemplate.content.cloneNode(true).children[0];
     const image = card.querySelector("[favourite-dish-image]");
@@ -31,14 +31,13 @@ function loader() {
   });
 }
 
-//removing the item from favourite list
+//removing the item from favourite list match the id and remove and hide the results from the page
 removeFromFavourite = (e) => {
   var index = list
     .map((item) => {
       return item.idMeal;
     })
     .indexOf(e);
-
   meals[index].boxElement.classList.toggle("hide", true);
   meals.splice(index, 1);
   list.splice(index, 1);

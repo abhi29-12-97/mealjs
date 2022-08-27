@@ -4,11 +4,12 @@
     <link rel="stylesheet" href="main.css" />
     <title>Favourite Meals</title>
   </head>
+  <!-- on load we'll fetch the local storage data and store that in array -->
   <body onload="loader()">
     <div id="favourite-page">
-      <!-- navbar -->
-      <!-- navbar -->
+      <!-- navbar starts-->
       <div class="navBar">
+        <!-- div for logo which also acts as moving to home page -->
         <div class="logo">
           <a href="./index.html"
             ><img
@@ -16,15 +17,19 @@
               src="https://dcassetcdn.com/design_img/375573/141837/141837_3031164_375573_image.jpg"
           /></a>
         </div>
+        <!-- div for the meal app name -->
         <div class="Tag-Line">
           <h4 class="h2">Why wait?</h4>
           <h4 class="h6">Order Now</h4>
         </div>
+        <!-- moving to the recent tabs -->
         <div class="recents"></div>
+        <!-- link to move to favourite list page -->
         <div class="favourite-tab-link">
           <a href="./favourite.html">Favourites</a>
         </div>
-        <div class="search" meal-search>
+        <!-- search bar of our page which will only search the meals present in our local storage-->
+        <div class="search">
           <input
             type="search"
             id="search-bar"
@@ -33,8 +38,7 @@
           />
         </div>
       </div>
-
-      <!-- navbar ends -->
+      <!-- nav bar ends -->
       <!-- div showing all the meals we have in our favourite list -->
       <div class="favourite-list" favourite-meal-list></div>
 
