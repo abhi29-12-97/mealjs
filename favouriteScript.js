@@ -9,10 +9,9 @@ var count = 0;
 
 //loade function which will load the items from the local storage such that everyTime we load the favourite page we only gets the items which we have added and favourites
 function loader() {
-  console.log("loading.....");
   list = JSON.parse(localStorage.getItem("Favourite"));
+
   meals = list.map((element) => {
-    console.log(element.strMeal);
     const card = mealTemplate.content.cloneNode(true).children[0];
     const image = card.querySelector("[favourite-dish-image]");
     const name = card.querySelector("[favourite-dish-name]");
@@ -34,12 +33,12 @@ function loader() {
 
 //removing the item from favourite list
 removeFromFavourite = (e) => {
-  console.log(list);
   var index = list
     .map((item) => {
       return item.idMeal;
     })
     .indexOf(e);
+
   meals[index].boxElement.classList.toggle("hide", true);
   meals.splice(index, 1);
   list.splice(index, 1);

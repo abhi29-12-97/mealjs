@@ -12,7 +12,6 @@ let favourites = [];
 updateLocal = () => {
   let array = JSON.parse(localStorage.getItem("Favourite"));
   if (array === null) {
-    console.log(array);
     localStorage.setItem("Favourite", JSON.stringify(favourites));
     return;
   }
@@ -33,13 +32,11 @@ addToFavourite = (e) => {
   }
   favourites.push(newFavourite[0]);
   localStorage.setItem("Favourite", JSON.stringify(favourites));
-  console.log(favourites);
 };
 
 // creating session cookie for meal page so that everytime we click a meal we can show that data only
 mealPage = (e) => {
   var newFavourite = meals.filter((item) => item.idMeal === e);
-  console.log(newFavourite);
   sessionStorage.setItem("meal", JSON.stringify(newFavourite));
 };
 
