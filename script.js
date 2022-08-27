@@ -21,7 +21,12 @@ updateLocal = () => {
 
 //adding add to favourite on click of add to favourite button
 addToFavourite = (e) => {
-  var newFavourite = meals.filter((item) => item.idMeal === e);
+  var newFavourite = meals.filter((item) => {
+    if (item.idMeal === e) {
+      item.boxElement.classList.toggle("hide");
+    }
+    return item.idMeal === e;
+  });
   favourites = JSON.parse(localStorage.getItem("Favourite"));
   if (favourites.some((item) => item.idMeal === e)) {
     return;
@@ -65,6 +70,7 @@ fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=")
       image.src = element.strMealThumb;
       name.textContent = element.strMeal;
       id.id = element.idMeal;
+      id.textContent = "Add Favourites";
       links.id = element.idMeal;
       mealList.append(card);
       return {
