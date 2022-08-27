@@ -10,8 +10,13 @@ let favourites = [];
 
 //onloading of the page updating the local storage and favourites array so that we don't store duplicates
 updateLocal = () => {
-  favourites = JSON.parse(localStorage.getItem("Favourite"));
-  localStorage.setItem("Favourite", JSON.stringify(favourites));
+  let array = JSON.parse(localStorage.getItem("Favourite"));
+  if (array === null) {
+    console.log(array);
+    localStorage.setItem("Favourite", JSON.stringify(favourites));
+    return;
+  }
+  localStorage.setItem("Favourite", JSON.stringify(array));
 };
 
 //adding add to favourite on click of add to favourite button
